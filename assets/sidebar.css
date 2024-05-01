@@ -1,0 +1,84 @@
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.my-container {
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    /* padding-right: 100px; */
+}
+
+.sidebar {
+    z-index: 1;
+    width: 250px;
+    height: 100%;
+    /* background-color: rgb(46, 46, 46); */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+    translate: 110% 0;
+    transition-duration: 550ms;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.sidebar.open {
+    translate: 0 0;
+}
+
+#my-toggle-btn {
+    z-index: 1;
+    font-size: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+    user-select: none;
+}
+
+#my-toggle-btn:hover {
+    color: #64707c;
+    transition: 0.8s ease-in-out;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 25%;
+}
+
+.sidebar ul li {
+    margin-bottom: 5%;
+    text-align: right;
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar ul li:hover {
+    transform: translate(-10%);
+    transition: 0.6s ease-in-out;
+}
+
+.sidebar ul li:hover a {
+    color: #64707c;
+    transition: 0.8s ease-in-out;
+}
