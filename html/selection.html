@@ -22,6 +22,7 @@
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/sidebar.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/loader.css" /> -->
   </head>
   <body>
     <div class="sidebar" id="sidebar">
@@ -43,25 +44,31 @@
           <form>
             <div class="form-row align-items-center">
               <div class="col-auto my-1">
-                <select
-                  class="custom-select mr-sm-2"
-                  id="inlineFormCustomSelect"
+                <label for="sortOption" class="form-label" id="sortOptionLabel"
+                  >Sort Option</label
                 >
-                  <option selected>Increase</option>
-                  <option value="1">Decrease</option>
+                <select class="custom-select mr-sm-2" id="sortOption">
+                  <option selected value="1">Increase</option>
+                  <option value="2">Decrease</option>
                 </select>
               </div>
-              <label for="speedrange" class="form-label" id="speedrangeLabel">Speed: </label>
+              <label
+                for="speedrange"
+                class="form-label"
+                id="speedrangeLabel"
+              ></label>
               <input
                 type="range"
                 class="form-range"
-                min="0"
+                min="1"
                 max="5"
                 step="1"
                 id="speedrange"
               />
 
-              <label for="lengthrange" class="form-label" id="lengthrangeLabel">Length: </label>
+              <label for="lengthrange" class="form-label" id="lengthrangeLabel"
+                >Length:
+              </label>
               <input
                 type="range"
                 class="form-range"
@@ -71,18 +78,21 @@
                 id="lengthrange"
               />
             </div>
+
+            <center>
+              <button type="button" class="btn btn-primary" id="runBtn">
+                <i class="bi bi-play" id="run"></i>
+              </button>
+            </center>
           </form>
         </div>
         <div class="diagram col-7">
           <div class="container">diagram</div>
         </div>
       </div>
-      <!-- Your main content goes here -->
-      <!-- <h1>Main Content</h1>
-        <p>This is the main content area.</p> -->
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <!-- <div class="loader"></div> -->
     <script>
       function toggleSidebar() {
         var sidebar = document.getElementById("sidebar");
@@ -91,6 +101,17 @@
       document
         .getElementById("my-toggle-btn")
         .addEventListener("click", toggleSidebar);
+
+      // window.addEventListener("load", function () {
+      //   var loader = document.querySelector(".loader");
+      //   loader.style.display = "block";
+      // });
+
+      // // Hide loader when the page has finished loading
+      // window.addEventListener("DOMContentLoaded", function () {
+      //   var loader = document.querySelector(".loader");
+      //   loader.style.display = "none";
+      // });
     </script>
 
     <script
@@ -109,6 +130,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="../assets/script.js"></script>
+    <script src="../assets/js/filter.js"></script>
+    <!-- <script src="../assets/js/chaos.js"></script> -->
   </body>
 </html>
