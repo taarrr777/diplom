@@ -29,7 +29,7 @@ function createCube2() {
 }
 
 // Create 10 cubes with random properties
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < 50; i++) {
     createCube();
     createCube2();
 }

@@ -20,19 +20,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/sidebar.css" />
-    <!-- <link rel="stylesheet" href="../assets/css/loader.css" /> -->
+    <!-- <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/sidebar.css" /> -->
+    <link rel="stylesheet" href="../assets/css/selection.css" />
   </head>
   <body>
     <div class="sidebar" id="sidebar">
       <ul>
         <li><a href="./index.html">Main Page</a></li>
-        <li><a href="">Selection Sort</a></li>
-        <li><a href="">Bubble Sort</a></li>
-        <li><a href="">Insertion Sort</a></li>
-        <li><a href="">Merge Sort</a></li>
-        <li><a href="">Quick Sort</a></li>
+        <li><a href="./selection.html">Selection Sort</a></li>
+        <li><a href="./bubble.html">Bubble Sort</a></li>
+        <li><a href="./insertion.html">Insertion Sort</a></li>
+        <li><a href="./merge.html">Merge Sort</a></li>
+        <li><a href="./quick.html">Quick Sort</a></li>
       </ul>
     </div>
 
@@ -73,21 +73,26 @@
                 type="range"
                 class="form-range"
                 min="3"
-                max="15"
+                max="20"
                 step="1"
+                value="10"
                 id="lengthrange"
               />
             </div>
 
             <center>
-              <button type="button" class="btn btn-primary" id="runBtn">
+              <button type="button" class="btn btn-primary" id="runBtn" onclick="CreateColumns()">
                 <i class="bi bi-play" id="run"></i>
               </button>
             </center>
           </form>
         </div>
         <div class="diagram col-7">
-          <div class="container">diagram</div>
+          <div class="container">
+            <div class="sort-columns">
+              <!-- <div class="sort-div"></div> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -131,6 +136,7 @@
     ></script>
 
     <script src="../assets/js/filter.js"></script>
+    <script src="../assets/js/selection.js"></script>
     <!-- <script src="../assets/js/chaos.js"></script> -->
   </body>
 </html>
