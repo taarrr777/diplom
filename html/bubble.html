@@ -20,9 +20,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <!-- <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/sidebar.css" /> -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/sidebar.css" /> -->
     <link rel="stylesheet" href="../assets/css/bubble.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="sidebar" id="sidebar">
@@ -40,7 +42,7 @@
 
     <div class="content">
       <div class="row">
-        <div class="filters col-3">
+        <div class="filters col-sm-12 col-md-3">
           <form>
             <div class="form-row align-items-center">
               <div class="col-auto my-1">
@@ -75,19 +77,24 @@
                 min="3"
                 max="20"
                 step="1"
-                value="10"
+                value="18"
                 id="lengthrange"
               />
             </div>
 
             <center>
-              <button type="button" class="btn btn-primary" id="runBtn" onclick="CreateColumns()">
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="runBtn"
+                onclick="CreateColumns()"
+              >
                 <i class="bi bi-play" id="run"></i>
               </button>
             </center>
           </form>
         </div>
-        <div class="diagram col-7">
+        <div class="diagram col-sm-12 col-md-7">
           <div class="container">
             <div class="sort-columns">
               <!-- <div class="sort-div"></div> -->
@@ -95,6 +102,135 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="reveal additional row">
+      <div class="info col-3">Bubble sort is a sorting algorithm that starts from the first element of an array and compares it with the second element. 
+        If the first element is greater than the second, we swap them. It continues this process until the end of the array, with the largest elements “bubbling” to the top. 
+        Its worst-case time complexity is O(n²), and its best-case time complexity is O(n).</div>
+      <div class="codes col-7">
+        <div onclick="Active()" id="js" class="lang active1">
+          <img id="js" src="../assets/img/js.png" alt="" />
+        </div>
+        <div onclick="Active()" id="py" class="lang">
+          <img id="py" src="../assets/img/py.png" alt="" />
+        </div>
+        <div onclick="Active()" id="c_sharp" class="lang">
+          <img id="c_sharp" src="../assets/img/c_sharp.png" alt="" />
+        </div>
+        <div onclick="Active()" id="cpp" class="lang">
+          <img id="cpp" src="../assets/img/c++.png" alt="" />
+        </div>
+        <div class="codes_ch">
+
+          <!-- Javascript -->
+          <div id="js_code" class="code-editor">
+          <pre>
+            <code id="code-lines" class="language-javascript">
+function bubbleSort(arr) {
+  for(var i = 0; i < arr.length; i++) {
+      for(var j = 0; j < ( arr.length - i -1 ); j++) {
+          if(arr[j] > arr[j+1]) {
+            var temp = arr[j]
+            arr[j] = arr[j + 1]
+            arr[j+1] = temp
+          }
+      }
+  }
+}      
+            </code>
+          </pre>
+        </div>
+          <!-- Python -->
+        <div id="py_code" class="code-editor">
+          <pre>
+            <code class="language-python">
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+              
+            </code>
+          </pre>
+        </div>
+
+        <!-- C# -->
+        <div id="c_sharp_code" class="code-editor">
+          <pre><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] array = { 64, 34, 25, 12, 22, 11, 90 };
+
+        Console.WriteLine("Array before sorting:");
+        PrintArray(array);
+
+        BubbleSort(array);
+
+        Console.WriteLine("\nArray after sorting:");
+        PrintArray(array);
+    }
+
+    static void BubbleSort(int[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (int value in arr)
+        {
+            Console.Write(value + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+          </code></pre>
+      </div>
+
+        <!-- C++ -->
+      <div id="cpp_code" class="code-editor">
+        <pre>
+          <code class="language-cpp">
+void swap(int *xp, int *yp) {
+  int temp = *xp;
+  *xp = *yp;
+  *yp = temp;
+}
+void bubbleSort(int arr[], int n) {
+  int i, j;
+  for (i = 0; i < n-1; i++)
+      for (j = 0; j < n-i-1; j++)
+          if (arr[j] > arr[j+1])
+              swap(&arr[j], &arr[j+1]);
+}
+          </code>
+        </pre>
+      </div>
+
+
+        </div>
+        
+      </div>
+      
     </div>
 
     <!-- <div class="loader"></div> -->
@@ -137,6 +273,8 @@
 
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/bubble.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
     <!-- <script src="../assets/js/chaos.js"></script> -->
   </body>
 </html>

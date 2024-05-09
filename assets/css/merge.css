@@ -93,26 +93,13 @@ body {
 
 
 /* ----sorting pages---- */
-.diagram {
-    border: 1px solid aliceblue;
-    margin-left: 2%;
-    color: aliceblue;
-}
-
-.filters {
-    border: 1px solid aliceblue;
-    color: aliceblue;
-    margin-left: 2%;
-    padding: 2%;
-    /* height: 100%; */
-}
 
 .content {
     margin-top: 2%;
 }
 
 #sortOption {
-    margin-left: 2%;
+    margin-left: 1%;
     margin-top: 4%;
     width: 70%;
     color: aliceblue;
@@ -155,19 +142,14 @@ input[type="range"]:focus::-webkit-slider-thumb{
     outline-width: 1px;
     box-shadow: 0 0 2px 2px rgb(34, 94, 27);
 }
-.sort-columns{
-    /* display: flex;
-    flex-wrap: wrap; */
-    display: inline-block;
-    /* position: relative; */
-    padding-left: 4%;
+
+#py_code{
+    display: none;
 }
-.sort-div{
-    display: inline-block;
-    /* height: 100px; */
-    background-color: aliceblue;
-    /* width: 30px; */
-    /* margin-left: 1%; */
-    border: 1px solid black;
-    
+#c_sharp_code{
+    display: none;
+}
+#cpp_code{
+    /* overflow: hidden; */
+    display: none;
 }
