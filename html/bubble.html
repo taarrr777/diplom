@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/style.css" /> -->
     <!-- <link rel="stylesheet" href="../assets/css/sidebar.css" /> -->
     <link rel="stylesheet" href="../assets/css/bubble.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css">
@@ -33,7 +33,7 @@
         <li><a href="./selection.html">Selection Sort</a></li>
         <li><a href="./bubble.html">Bubble Sort</a></li>
         <li><a href="./insertion.html">Insertion Sort</a></li>
-        <li><a href="./merge.html">Merge Sort</a></li>
+        <!-- <li><a href="./merge.html">Merge Sort</a></li> -->
         <li><a href="./quick.html">Quick Sort</a></li>
       </ul>
     </div>
@@ -50,8 +50,8 @@
                   >Sort Option</label
                 >
                 <select class="custom-select mr-sm-2" id="sortOption">
-                  <option selected value="1" id="o1">Increase</option>
-                  <option value="2" id="o1">Decrease</option>
+                  <option selected value="increase" id="o1">Increase</option>
+                  <option value="decrease" id="o1">Decrease</option>
                 </select>
               </div>
               <label
@@ -85,19 +85,39 @@
             <center>
               <button
                 type="button"
-                class="btn btn-primary"
-                id="runBtn"
-                onclick="CreateColumns()"
+                class="btn btn-primary runBtn"
+                onclick="createBars()"
+              >
+              <i class="bi bi-check-lg"></i>
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-primary runBtn"
+                id="start_btn"
+                onclick="bubbleSort()"
               >
                 <i class="bi bi-play" id="run"></i>
               </button>
+              <button
+                type="button"
+                class="btn btn-primary runBtn"
+                id="start_btn"
+                onclick="window.location.reload()"
+              >
+              <i class="bi bi-x-lg"></i>
+              </button>
+
+
             </center>
           </form>
+        
         </div>
         <div class="diagram col-sm-12 col-md-7">
           <div class="container">
             <div class="sort-columns">
-              <!-- <div class="sort-div"></div> -->
+             
             </div>
           </div>
         </div>

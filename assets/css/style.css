@@ -108,7 +108,7 @@ body {
 .quick_sort:hover {
     box-shadow: 0 10px 10px 10px rgb(118, 121, 76);
     /* transform: scale(1.1, 1.1); */
-    transform: translate(0, -80%);
+    transform: translate(0, 80%);
     transition: 1.3s;
 }
 
@@ -180,7 +180,7 @@ h5 {
 
 .diagram {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-top: 1px solid aliceblue;
+    border: none;
     margin-left: 2%;
     color: aliceblue;
 }
@@ -201,25 +201,24 @@ h5 {
 
 
 
-
-.sort-columns{
-    display: flex;
+.sort-columns {
+    /* display: flex;
     flex-wrap: wrap;
-    /* display: inline-block; */
     position: relative;
-    padding-left: 4%;
+    padding-left: 4%; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
     height: 600px;
 }
-.sort-div{
-    /* display: inline-block; */
-    /* height: 100px; */
+
+.bar {
+    width: 40px;
+    margin: 0 2px;
     background-color: aliceblue;
-    /* width: 30px; */
-    /* margin-left: 1%; */
-    border: 1px solid black;
-    position: absolute;
-    /* top: 100%; */
-    /* transform: translateY(-100%); */
+    transition: 0.8s;
 }
 
 

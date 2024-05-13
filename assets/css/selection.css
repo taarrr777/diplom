@@ -118,16 +118,33 @@ option {
     background: rgb(46, 46, 46);
 
 }
-#runBtn{
+.runBtn{
     width: 20%;
     font-size: 20px;
     transition: .6s;
 }
 
+.sort-columns {
+    /* display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-left: 4%; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
-#js_code{
-    overflow: hidden;
+    height: 600px;
 }
+
+.bar {
+    width: 40px;
+    margin: 0 2px;
+    background-color: aliceblue;
+    transition: 0.8s;
+}
+
+
 #py_code{
     display: none;
 }

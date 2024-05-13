@@ -122,7 +122,7 @@ body {
 #o1:hover{
     background-color: rgb(118, 121, 76) !important;
 }
-#runBtn{
+.runBtn{
     width: 20%;
     font-size: 20px;
     transition: .6s;

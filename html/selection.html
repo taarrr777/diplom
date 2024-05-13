@@ -39,7 +39,7 @@
         <li><a href="./selection.html">Selection Sort</a></li>
         <li><a href="./bubble.html">Bubble Sort</a></li>
         <li><a href="./insertion.html">Insertion Sort</a></li>
-        <li><a href="./merge.html">Merge Sort</a></li>
+        <!-- <li><a href="./merge.html">Merge Sort</a></li> -->
         <li><a href="./quick.html">Quick Sort</a></li>
       </ul>
     </div>
@@ -56,8 +56,8 @@
                   >Sort Option</label
                 >
                 <select class="custom-select mr-sm-2" id="sortOption">
-                  <option selected value="1" id="o1">Increase</option>
-                  <option value="2" id="o1">Decrease</option>
+                  <option selected value="increase" id="o1">Increase</option>
+                  <option value="decrease" id="o1">Decrease</option>
                 </select>
               </div>
               <label
@@ -91,12 +91,31 @@
             <center>
               <button
                 type="button"
-                class="btn btn-primary"
-                id="runBtn"
-                onclick="CreateColumns()"
+                class="btn btn-primary runBtn"
+                onclick="createBars()"
+              >
+              <i class="bi bi-check-lg"></i>
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-primary runBtn"
+                id="start_btn"
+                onclick="selectionSort()"
               >
                 <i class="bi bi-play" id="run"></i>
               </button>
+              <button
+                type="button"
+                class="btn btn-primary runBtn"
+                id="start_btn"
+                onclick="window.location.reload()"
+              >
+              <i class="bi bi-x-lg"></i>
+              </button>
+
+
             </center>
           </form>
         </div>

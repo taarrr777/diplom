@@ -36,13 +36,6 @@ function reveal() {
 
   let code_divs = document.getElementsByClassName("lang");
   function Active() {
-    // document.querySelectorAll('.lang').forEach(function(element) {
-    //     element.addEventListener('click', function(event) {
-    //         // Get the ID of the clicked element
-    //         const clickedElementId = event.target.id;
-    //     });
-  
-    // });
     for (let i = 0; i < code_divs.length; i++) {
       code_divs[i].classList.remove("active1");
     }

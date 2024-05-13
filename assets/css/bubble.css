@@ -4,6 +4,7 @@ html {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
+
 body {
     background-color: rgb(46, 46, 46);
     margin: 0;
@@ -93,10 +94,30 @@ body {
 
 
 /* ----sorting pages---- */
+.diagram {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    margin-left: 2%;
+    color: aliceblue;
+}
+
+.filters {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    margin-left: 2%;
+    padding: 2%;
+    /* height: 100%; */
+}
+
+.content {
+    margin-top: 2%;
+    /* margin-bottom: 20%; */
+}
+
 #sortOption {
     margin-left: 1%;
     margin-top: 4%;
-    width: 70%; 
+    width: 70%;
     color: aliceblue;
     background: rgb(46, 46, 46);
     border: none;
@@ -104,51 +125,179 @@ body {
     cursor: pointer;
     outline: none;
 }
-#sortOption:hover{
+
+#sortOption:hover {
     border-bottom: 2px solid rgb(151, 105, 49);
     transition: 0.6s;
 }
+
 #o1 {
     color: aliceblue;
     background: rgb(46, 46, 46);
 
 }
-#o1:hover{
+
+#o1:hover {
     background-color: rgb(151, 105, 49) !important;
 }
-#runBtn{
+
+.runBtn {
     width: 20%;
     font-size: 20px;
     transition: .6s;
     background-color: rgb(151, 105, 49) !important;
     border: none;
 }
-#runBtn:hover{
+
+.runBtn:hover {
     background-color: rgb(131, 91, 41) !important;
 }
-input[type="range"]::-webkit-slider-thumb{
+
+input[type="range"]::-webkit-slider-thumb {
     background-color: rgb(151, 105, 49);
 }
 
-input[type="range"]:focus::-webkit-slider-thumb{
+input[type="range"]:focus::-webkit-slider-thumb {
     background-color: rgb(151, 105, 49);
     outline-style: solid;
-    outline-color:azure;
+    outline-color: azure;
     outline-width: 1px;
     box-shadow: 0 0 2px 2px rgb(151, 105, 49);
 }
 
 
-#js_code{
+
+
+
+.sort-columns {
+    /* display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-left: 4%; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 600px;
+}
+
+.bar {
+    width: 40px;
+    margin: 0 2px;
+    background-color: aliceblue;
+    transition: 0.8s;
+}
+
+.additional {
+    margin-top: 2%;
+    /* margin-bottom: 20%; */
+    margin-bottom: 10% !important;
+    height: 450px;
+    /* position: relative; */
+}
+
+.codes {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    margin-left: 2%;
+    margin-bottom: 2%;
+
+    /* padding: 2%; */
+    display: inline-block;
+    position: relative;
+    /* height: 500px; */
+
+}
+
+.info {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    margin-left: 2%;
+    /* margin-bottom: 2%; */
+    padding: 2%;
+}
+
+.lang {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    /* padding: 5px; */
+    padding: 5px;
+    margin: 0;
+}
+
+/* .active1{
+    border: 1px solid aliceblue;
+    border-bottom: none;
+} */
+.lang:hover img {
+    transform: scale(0.9, 0.9);
+    opacity: .8;
+}
+
+.lang:hover {
+    background-color: rgb(55, 51, 51);
+}
+
+img {
+    width: 40px;
+    transition: .6s ease-in-out;
+}
+
+.codes_ch {
+    position: relative;
+}
+
+
+.code-editor {
+    /*Dark background color */
+    /* background-color: transparent !important; */
+    color: #d4d4d4 !important;
+    /* Light text color */
+    font-family: 'Courier New', Courier, monospace;
+    /* Monospace font for code */
+    padding: 10px;
+    border-radius: 5px;
+    /* border-left: 1px solid aliceblue; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    /* Enable vertical scrolling */
+    overflow-x: hidden;
+    height: 350px;
+    /* Set a fixed height or adjust as needed */
+    width: 100%;
+    position: absolute;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+    margin-bottom: 10% !important;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+    margin-bottom: 10% !important;
+}
+
+#js_code {
     overflow: hidden;
 }
-#py_code{
+
+#py_code {
     display: none;
 }
-#c_sharp_code{
+
+#c_sharp_code {
     display: none;
 }
-#cpp_code{
+
+#cpp_code {
     overflow: hidden;
     display: none;
 }
